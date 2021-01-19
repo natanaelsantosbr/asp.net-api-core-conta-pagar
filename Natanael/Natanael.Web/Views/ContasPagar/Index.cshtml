@@ -1,0 +1,46 @@
+﻿@model Natanael.Aplicacao.Web.ConsumirContasPagar.Modelos.ModeloDeRetornoDeLista
+
+@{
+    ViewData["Title"] = "Contas Pagar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <p class="mb-12 mb-12 float-right">
+                <a asp-action="Cadastrar" class="btn btn-primary">Novo</a>
+            </p>
+            <table class="table table-hover table-click">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Valor Corrigido</th>
+                        <th>Qtd. Dias em Atraso</th>
+                        <th>Data De Pagamento</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Lista)
+                    {
+                        <tr>
+                            <td>
+                                @item.Nome
+                            </td>
+                            <td>@item.Valor</td>
+                            <td>@item.ValorCorrigido</td>
+                            <td>@item.QuantidadeDeDiasDeAtraso</td>
+                            <td>@item.DataDePagamento</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

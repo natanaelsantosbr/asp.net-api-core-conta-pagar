@@ -1,0 +1,41 @@
+﻿@model Natanael.Aplicacao.Web.ConsumirContasPagar.Modelos.ModeloDeConsumoDeCadastroDeContaPagar
+
+@{
+    ViewData["Title"] = "Cadastrar Conta Pagar";
+}
+
+<div class="card">
+    <div class="card-body">
+        <form asp-controller="ContasPagar" asp-action="Cadastrar" id="formCadastrarContaPagar" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label">Valor</label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDeVencimento" class="control-label">Data de Vencimento</label>
+                <input asp-for="DataDeVencimento" class="form-control" />
+                <span asp-validation-for="DataDeVencimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDePagamento" class="control-label">Data de Pagamento</label>
+                <input asp-for="DataDePagamento" class="form-control" />
+                <span asp-validation-for="DataDePagamento" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-success"><em class="mdi mdi-check"></em> Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/js/paginas/contaspagar/cadastrarContasPagar.js"></script>
+}
