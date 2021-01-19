@@ -45,17 +45,17 @@ namespace Natanael.Dominio.ContasPagar
                 if(dias >= 1 && dias <= 3)
                 {
                     this.PercentualDaMulta = 2.00;
-                    this.PercentualDosJuros = 1.0;
+                    this.PercentualDosJuros = 0.1;
                 }
                 else if(dias > 3 && dias <= 5)
                 {
                     this.PercentualDaMulta = 3.00;
-                    this.PercentualDosJuros = 2.0;
+                    this.PercentualDosJuros = 0.2;
                 }
                 else if(dias > 5)
                 {
                     this.PercentualDaMulta = 5.00;
-                    this.PercentualDosJuros = 3.0;
+                    this.PercentualDosJuros = 0.3;
                 }
 
                 this.CalcularValorDaMulta();
@@ -97,9 +97,8 @@ namespace Natanael.Dominio.ContasPagar
 
         private void CalcularValorDosJuros()
         {
-            double percentual = this.PercentualDosJuros / 100;
-            double percentualPor30Dias = percentual / 30;
-            double juros = this.Valor * percentualPor30Dias;
+            double percentualPorDiaDeAtraso = this.PercentualDosJuros * this.QuantidadeDeDiasEmAtraso;
+            double juros = this.Valor * percentualPorDiaDeAtraso;
 
             this.ValorDosJuros = juros;
         }
