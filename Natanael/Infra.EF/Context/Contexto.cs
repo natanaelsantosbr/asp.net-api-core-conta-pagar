@@ -9,6 +9,10 @@ namespace Infra.EF.Context
 {
     public class Contexto : DbContext
     {
+        public Contexto(DbContextOptions<Contexto> options) : base(options)
+        {
+
+        }
         public DbSet<ContaPagar> ContasPagar{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
