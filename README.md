@@ -1,6 +1,6 @@
 # asp.net-api-core-conta-pagar
 
-Criar uma API para Contas a Pagar em ASP.NET CORE 3.1 com EntityFramework e Consumir utilizando ASP.NET Core
+Criar uma API para Contas a Pagar em ASP.NET API CORE 3.1 com EntityFramework e Consumir utilizando ASP.NET Core
 
 Passo a passo
 - Criar o banco de dados em (localdb)\\mssqllocaldb com o nome contas
