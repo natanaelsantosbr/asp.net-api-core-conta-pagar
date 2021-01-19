@@ -6,20 +6,20 @@ using System.Text;
 
 namespace Natanael.Aplicacao.API.GestaoDeContasPagar.Modelos
 {
-    public class ModeloDeRetornoDaLista : ModeloDeRetornoPadrao
+    public class ModeloDeLista : ModeloPadrao
     {
-        public ModeloDeRetornoDaLista()
+        public ModeloDeLista()
         {
             this.Lista = new List<ModeloDeContaPagarDaLista>();
         }
 
-        public ModeloDeRetornoDaLista(bool sucesso, string mensagem) : this()
+        public ModeloDeLista(bool sucesso, string mensagem) : this()
         {
             this.Sucesso = sucesso;
             this.Mensagem = mensagem;
         }
 
-        public ModeloDeRetornoDaLista(bool sucesso, string mensagem, List<ContaPagar> lista) : this()
+        public ModeloDeLista(bool sucesso, string mensagem, List<ContaPagar> lista) : this()
         {
             
             this.Sucesso = sucesso;

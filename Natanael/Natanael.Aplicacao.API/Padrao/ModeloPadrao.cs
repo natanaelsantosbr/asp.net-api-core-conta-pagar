@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Natanael.Aplicacao.API.Padrao
 {
-    public class ModeloDeRetornoPadrao
+    public class ModeloPadrao
     {
-        public ModeloDeRetornoPadrao()
+        public ModeloPadrao()
         {
 
         }
 
-        public ModeloDeRetornoPadrao(bool sucesso, string mensagem)
+        public ModeloPadrao(bool sucesso, string mensagem)
         {
             Sucesso = sucesso;
             Mensagem = mensagem;

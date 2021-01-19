@@ -8,8 +8,8 @@ namespace Natanael.Aplicacao.API.GestaoDeContasPagar.Servicos
 {
     public interface IServicoDeGestaoDeContasPagar
     {
-        ModeloDeRetornoDaLista Listar();
+        ModeloDeLista Listar();
 
-        ModeloDeRetornoPadrao Cadastrar(ModeloDeCadastroDeContaPagar modelo);
+        ModeloPadrao Cadastrar(ModeloDeCadastroDeContaPagar modelo);
     }
 }

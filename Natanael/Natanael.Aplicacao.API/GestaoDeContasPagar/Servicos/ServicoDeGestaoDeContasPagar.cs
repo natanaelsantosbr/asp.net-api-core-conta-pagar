@@ -17,7 +17,7 @@ namespace Natanael.Aplicacao.API.GestaoDeContasPagar.Servicos
             this._servicoExternoDePersistencia = servicoExternoDePersistencia;
         }
 
-        public ModeloDeRetornoPadrao Cadastrar(ModeloDeCadastroDeContaPagar modelo)
+        public ModeloPadrao Cadastrar(ModeloDeCadastroDeContaPagar modelo)
         {
             try
             {
@@ -26,26 +26,26 @@ namespace Natanael.Aplicacao.API.GestaoDeContasPagar.Servicos
                 this._servicoExternoDePersistencia.RepositorioDeContasPagar.Cadastrar(contaPagar);
                 this._servicoExternoDePersistencia.Persistir();
 
-                return new ModeloDeRetornoPadrao(true, "Conta Pagar cadastrada com sucesso");
+                return new ModeloPadrao(true, "Conta Pagar cadastrada com sucesso");
 
             }
             catch (Exception ex)
             {
-                return new ModeloDeRetornoPadrao(false, ex.Message);
+                return new ModeloPadrao(false, ex.Message);
             }
         }
 
-        public ModeloDeRetornoDaLista Listar()
+        public ModeloDeLista Listar()
         {
             try
             {
                 var contas = this._servicoExternoDePersistencia.RepositorioDeContasPagar.Listar();
 
-                return new ModeloDeRetornoDaLista(true, "ok", contas);
+                return new ModeloDeLista(true, "ok", contas);
             }
             catch (Exception ex)
             {
-                return new ModeloDeRetornoDaLista(false, ex.Message);
+                return new ModeloDeLista(false, ex.Message);
             }
         }
     }
