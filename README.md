@@ -15,6 +15,7 @@ Passo a passo
 	- DbContext
 	- Mapeamentos
 	- Repositorios
+	- IServicoExternoDePersistencia e ServicoExternoDePersistenciaViaEF
 - Criar o Contexto 
 	- DbSet ContaPagar
 - Criar o Mapeamento de Conta Pagar
