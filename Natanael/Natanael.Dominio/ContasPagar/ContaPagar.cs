@@ -32,6 +32,8 @@ namespace Natanael.Dominio.ContasPagar
         public double ValorDaMulta { get; private set; }
         public double PercentualDosJuros { get; private set; }
         public double ValorDosJuros { get; private set; }
+        public double ValorCorrigido { get; private set; }
+        public int QuantidadeDeDiasEmAtraso { get; private set; }
 
         private void ProcessarFinanceiro()
         {
@@ -40,6 +42,8 @@ namespace Natanael.Dominio.ContasPagar
             this.ValorDaMulta = 15.00;
             this.PercentualDosJuros = 5.00;
             this.ValorDosJuros = 10.0;
+            this.ValorCorrigido = 150.00;
+            this.QuantidadeDeDiasEmAtraso = 10;
         }
     }
 }

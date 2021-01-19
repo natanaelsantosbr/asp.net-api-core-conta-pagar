@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{8F0E7991
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.EF", "Infra.EF\Infra.EF.csproj", "{75684926-D705-45CF-9C09-4F0E322F4A7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{48A2368A-777D-4066-802F-1804CCD55412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Aplicacao.API", "Natanael.Aplicacao.API\Natanael.Aplicacao.API.csproj", "{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{75684926-D705-45CF-9C09-4F0E322F4A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75684926-D705-45CF-9C09-4F0E322F4A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75684926-D705-45CF-9C09-4F0E322F4A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{715F9904-37B5-4B5E-B6E4-F3CA19979608} = {3871570B-A0BB-4B5D-A4B2-A584101612BD}
 		{75684926-D705-45CF-9C09-4F0E322F4A7C} = {8F0E7991-1282-451C-8BE6-A8EBE9A72C0A}
+		{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C} = {48A2368A-777D-4066-802F-1804CCD55412}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0F6C614-B44B-4DB5-9F7E-ACDF5C6AE2AC}

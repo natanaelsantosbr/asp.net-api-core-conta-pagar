@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infra.EF\Infra.EF.csproj" />
+    <ProjectReference Include="..\Natanael.Dominio\Natanael.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>
