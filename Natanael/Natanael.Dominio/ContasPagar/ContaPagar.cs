@@ -13,6 +13,18 @@ namespace Natanael.Dominio.ContasPagar
 
         public ContaPagar(string nome, double valor, DateTime dataDeVencimento, DateTime dataDePagamento) : this()
         {
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException("Nome e obrigatorio");
+
+            if (valor <= 0)
+                throw new ArgumentException("Valor tem que ser maior que 0");
+
+            if(dataDeVencimento == DateTime.MinValue)
+                throw new ArgumentException("Insira uma data de vencimento válida");
+
+            if (dataDePagamento == DateTime.MinValue)
+                throw new ArgumentException("Insira uma data de pagamento válida");
+
             this.Nome = nome;
             this.Valor = valor;
             this.DataDeVencimento = dataDeVencimento;
@@ -92,16 +104,19 @@ namespace Natanael.Dominio.ContasPagar
 
             double multa = percentual * this.Valor;
 
+            multa = Math.Truncate(100 * multa) / 100;
+
             this.ValorDaMulta = multa;
         }
 
         private void CalcularValorDosJuros()
         {
-            double percentualPorDiaDeAtraso = this.PercentualDosJuros * this.QuantidadeDeDiasEmAtraso;
-            double juros = this.Valor * percentualPorDiaDeAtraso;
+            double percentual = this.PercentualDosJuros * this.QuantidadeDeDiasEmAtraso;
+            double juros = (this.Valor / 100) * percentual;
+
+            juros = Math.Truncate(100 * juros) / 100;
 
             this.ValorDosJuros = juros;
         }
-
     }
 }

@@ -5,23 +5,27 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{3871570B-A0BB-4B5D-A4B2-A584101612BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Dominio", "Natanael.Dominio\Natanael.Dominio.csproj", "{715F9904-37B5-4B5E-B6E4-F3CA19979608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Natanael.Dominio", "Natanael.Dominio\Natanael.Dominio.csproj", "{715F9904-37B5-4B5E-B6E4-F3CA19979608}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{8F0E7991-1282-451C-8BE6-A8EBE9A72C0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.EF", "Infra.EF\Infra.EF.csproj", "{75684926-D705-45CF-9C09-4F0E322F4A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.EF", "Infra.EF\Infra.EF.csproj", "{75684926-D705-45CF-9C09-4F0E322F4A7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{48A2368A-777D-4066-802F-1804CCD55412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Aplicacao.API", "Natanael.Aplicacao.API\Natanael.Aplicacao.API.csproj", "{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Natanael.Aplicacao.API", "Natanael.Aplicacao.API\Natanael.Aplicacao.API.csproj", "{F7A3DF50-5359-4CA2-B4FF-EB519AEE7D4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{57FFD3B3-9664-4AD0-B5F2-0DD868259394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Api", "Natanael.Api\Natanael.Api.csproj", "{54736E24-BCB1-479C-B982-F631D1C3010A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Natanael.Api", "Natanael.Api\Natanael.Api.csproj", "{54736E24-BCB1-479C-B982-F631D1C3010A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Aplicacao.Web", "Natanael.Aplicacao.Web\Natanael.Aplicacao.Web.csproj", "{247AD6B8-1B10-4DCA-A240-F838B6652865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Natanael.Aplicacao.Web", "Natanael.Aplicacao.Web\Natanael.Aplicacao.Web.csproj", "{247AD6B8-1B10-4DCA-A240-F838B6652865}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Web", "Natanael.Web\Natanael.Web.csproj", "{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Natanael.Web", "Natanael.Web\Natanael.Web.csproj", "{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{690BF47A-2814-4AFA-9B1E-78CE61CB2440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natanael.Tests", "Natanael.Tests\Natanael.Tests.csproj", "{53E0081A-18EC-4C4C-9FCF-D119FED16F63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E0081A-18EC-4C4C-9FCF-D119FED16F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E0081A-18EC-4C4C-9FCF-D119FED16F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E0081A-18EC-4C4C-9FCF-D119FED16F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E0081A-18EC-4C4C-9FCF-D119FED16F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{54736E24-BCB1-479C-B982-F631D1C3010A} = {57FFD3B3-9664-4AD0-B5F2-0DD868259394}
 		{247AD6B8-1B10-4DCA-A240-F838B6652865} = {48A2368A-777D-4066-802F-1804CCD55412}
 		{EAB94DBE-7A70-4D9E-B614-5AD4EC930BB8} = {57FFD3B3-9664-4AD0-B5F2-0DD868259394}
+		{53E0081A-18EC-4C4C-9FCF-D119FED16F63} = {690BF47A-2814-4AFA-9B1E-78CE61CB2440}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0F6C614-B44B-4DB5-9F7E-ACDF5C6AE2AC}
