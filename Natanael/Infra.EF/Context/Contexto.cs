@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Infra.EF.Mapeamentos;
+using Microsoft.EntityFrameworkCore;
 using Natanael.Dominio.ContasPagar;
 using System;
 using System.Collections.Generic;

@@ -2,6 +2,7 @@
 using Natanael.Dominio.ContasPagar;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Infra.EF.Repositorios
@@ -15,12 +16,12 @@ namespace Infra.EF.Repositorios
         }
         public void Cadastrar(ContaPagar contaPagar)
         {
-            throw new NotImplementedException();
+            this._contexto.Add(contaPagar);
         }
 
         public List<ContaPagar> Listar()
         {
-            throw new NotImplementedException();
+            return this._contexto.Set<ContaPagar>().OrderByDescending(a => a.Id).ToList();
         }
     }
 }
