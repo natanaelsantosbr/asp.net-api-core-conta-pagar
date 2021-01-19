@@ -12,6 +12,9 @@ Passo a passo
 	- Criar método para fazer o processamento (Popular as propriedades: DiasDeAtraso, PercentualDaMulta, ValorDaMulta, PercentualDosJuros e ValorDosJuros)
 - Criar a interface do repositório contaPagar
 - Criar a library de infra ef
+	- DbContext
+	- Mapeamentos
+	- Repositorios
 - Criar o Contexto 
 	- DbSet ContaPagar
 - Criar o Mapeamento de Conta Pagar
