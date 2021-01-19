@@ -38,9 +38,10 @@ Passo a passo
 - Criar a controle ContasPagar
 	- GET (Listagem)
 	- POST (Inclusao)
-6 - Criar a cliente web
+- Criar a cliente web
 - Adicionar a referencia (Aplicacao de Consumo)
 - Criar a controller de ContasPagar
 - Criar as views
 - Criar o layout
+- Criar os tests Unitários
 
