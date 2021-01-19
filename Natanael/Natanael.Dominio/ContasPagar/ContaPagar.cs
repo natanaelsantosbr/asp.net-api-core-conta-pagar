@@ -27,7 +27,6 @@ namespace Natanael.Dominio.ContasPagar
         public double Valor { get; private set; }
         public DateTime DataDeVencimento { get; private set; }
         public DateTime DataDePagamento { get; private set; }
-        public int DiasDeAtraso { get; private set; }
         public double PercentualDaMulta { get; private set; }
         public double ValorDaMulta { get; private set; }
         public double PercentualDosJuros { get; private set; }
@@ -37,13 +36,73 @@ namespace Natanael.Dominio.ContasPagar
 
         private void ProcessarFinanceiro()
         {
-            this.DiasDeAtraso = 10;
-            this.PercentualDaMulta = 10.0;
-            this.ValorDaMulta = 15.00;
-            this.PercentualDosJuros = 5.00;
-            this.ValorDosJuros = 10.0;
-            this.ValorCorrigido = 150.00;
-            this.QuantidadeDeDiasEmAtraso = 10;
+            var dias = this.TotalDeDias();
+
+            if(dias > 0)
+            {
+                this.QuantidadeDeDiasEmAtraso = dias;
+
+                if(dias >= 1 && dias <= 3)
+                {
+                    this.PercentualDaMulta = 2.00;
+                    this.PercentualDosJuros = 1.0;
+                }
+                else if(dias > 3 && dias <= 5)
+                {
+                    this.PercentualDaMulta = 3.00;
+                    this.PercentualDosJuros = 2.0;
+                }
+                else if(dias > 5)
+                {
+                    this.PercentualDaMulta = 5.00;
+                    this.PercentualDosJuros = 3.0;
+                }
+
+                this.CalcularValorDaMulta();
+                this.CalcularValorDosJuros();
+                this.CalcularValorCorrigido();
+
+            }
+            else
+            {
+                this.QuantidadeDeDiasEmAtraso = 0;
+                this.PercentualDaMulta = 0;
+                this.PercentualDosJuros = 0;
+                this.ValorDaMulta = 0;
+                this.ValorDosJuros = 0;
+                this.ValorCorrigido = this.Valor;
+
+            }
         }
+
+        private void CalcularValorCorrigido()
+        {
+            this.ValorCorrigido = this.Valor + (this.ValorDaMulta + this.ValorDosJuros);
+        }
+
+        private int TotalDeDias()
+        {
+            TimeSpan calculo = this.DataDePagamento.Subtract(this.DataDeVencimento);
+            return (int)calculo.TotalDays;
+        }
+
+        private void CalcularValorDaMulta()
+        {
+            double percentual = this.PercentualDaMulta / 100;
+
+            double multa = percentual * this.Valor;
+
+            this.ValorDaMulta = multa;
+        }
+
+        private void CalcularValorDosJuros()
+        {
+            double percentual = this.PercentualDosJuros / 100;
+            double percentualPor30Dias = percentual / 30;
+            double juros = this.Valor * percentualPor30Dias;
+
+            this.ValorDosJuros = juros;
+        }
+
     }
 }
